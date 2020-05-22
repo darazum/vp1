@@ -33,7 +33,14 @@ class Db
         $dbPassword = DB_PASSWORD;
 
         if (!$this->pdo) {
-            $this->pdo = new \PDO("mysql:host=$host;dbname=$dbName", $dbUser, $dbPassword);
+            $this->pdo = new \PDO(
+                "mysql:host=$host;dbname=$dbName",
+                $dbUser,
+                $dbPassword,
+                [
+                    \PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"
+                ]
+            );
         }
 
         return $this->pdo;

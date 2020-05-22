@@ -1,8 +1,10 @@
 <?php
-const DB_USER = 'mvc';
-const DB_NAME = 'mvc';
+const DB_USER = 'loftschools';
+const DB_NAME = 'loftschools';
 const DB_HOST = 'mysql';
-const DB_PASSWORD = 'mvc';
+const DB_PASSWORD = 'loftschools';
+
+const ADMIN_IDS = [9];
 
 function d(...$args)
 {
